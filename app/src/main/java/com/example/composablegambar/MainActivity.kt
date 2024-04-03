@@ -69,7 +69,7 @@ fun namegun(choso : Int):String{
 }
 
 @Composable
-fun Background(judul:String,modifier: Modifier = Modifier){
+fun Background(judul:String){
 
     Image(
         painter = painterResource(id = R.drawable.background_button),
@@ -95,7 +95,7 @@ fun Background(judul:String,modifier: Modifier = Modifier){
     }
 }
 @Composable
-fun Chosogun(judul:String,namegame:String,modifier: Modifier = Modifier){
+fun Chosogun(judul:String,namegame:String){
 
     var choso by remember {
         mutableIntStateOf(1)
@@ -117,8 +117,7 @@ fun Chosogun(judul:String,namegame:String,modifier: Modifier = Modifier){
     }
     Box(modifier = Modifier.fillMaxSize())
     {
-        Background(judul = judul,
-            modifier = Modifier.fillMaxSize())
+        Background(judul = judul)
 
         Column(
             modifier = Modifier.fillMaxWidth(),
